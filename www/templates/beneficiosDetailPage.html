@@ -1,0 +1,45 @@
+<ion-view view-title="Beneficios Detail Page">
+  <ion-nav-title>
+    <img class="headerImgStyle" src="img/logo.png">
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
+      <i class="icon ion-arrow-left-b"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="gomenuPage()">
+      <i class="icon ion-navicon-round"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content  style="border-bottom: 2px solid #00428a;">
+    <div>
+        <div class="coupenHeaderStyle">{{coupenDetails.title}}</div>
+        <div>
+            <img src="img/beneficos.jpg" class="coupenImgStyle" ng-hide="!!coupenDetails.image" style="height: 245px !important;">
+            <img ng-src="http://banistmo-backend.herokuapp.com/{{coupenDetails.image}}" class="coupenImgStyle" ng-if="!!coupenDetails.image" onError="this.src='img/beneficos.jpg'">
+       </div>
+   </div>
+    <div style="border-bottom: 2px solid #00428a;color:#00428a;">
+     <p class="formularioParaStyle" style="padding-left: 29px;">20% de descunto en todos ios platos con precio regular en la APP servicio de entrega gratulta a lass torres afiliadsa constant descuentos y promociones.</p>
+   </div>
+
+   <div style="border-bottom: 2px solid #00428a;color:#00428a;">
+     <div class="item item-text-wrap" style="border: none;font-size: 15px;">
+     <div class="row">
+      <div class="col col-50" style="font-weight: 600;color:#00428a;">Contacto Anarella Miro Telefono :</div>
+      <div class="col col-50" style="color:#00428a;"><span>123-456</span></div>
+     </div>
+     <div class="row">
+     <div class="col col-25" style="font-weight: 600;color:#00428a;">Correo:</div>
+     <div class="col col-75" style="color:#00428a;">
+       <a ng-href="mailto:{{ test_email }}" target="_blank">test@gmail.com</a>
+     </div>
+
+     </div>
+  </div>
+</div>
+  </ion-content>
+</ion-view>

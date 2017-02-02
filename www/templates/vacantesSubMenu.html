@@ -1,0 +1,38 @@
+<ion-view view-title="Vacantes">
+
+  <ion-nav-buttons side="left">
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
+      <i class="icon ion-arrow-left-b"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="gomenuPage()">
+      <i class="icon ion-navicon-round"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div class="list" style="padding-top: 12px;">
+      <div class="item item-input-inset" style="border: none;">
+        <label class="item-input-wrapper">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text"  placeholder="BusCar">
+        </label>
+        <button class="button button-small">
+          OK
+        </button>
+      </div>
+ </div>
+
+ <ion-list>
+   <ion-item class="item" style="border:none;color:#00428a;" type="item-text-wrap" ng-click="goDetailPage()">
+     <h2 style="font-weight: 600;color:#00428a;">Jefe || Seguridad Fisica</h2>
+     <div style="font-size: 12px;">del 1  al  10 de diciembre posicion del 1 2 3 4 5 6 7 8</div>
+     <div style="font-size: 12px;">Banistmo , panama</div>
+   </ion-item>
+ </ion-list>
+
+  </ion-content>
+
+</ion-view>

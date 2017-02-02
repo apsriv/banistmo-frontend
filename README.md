@@ -1,1 +1,2 @@
-# banistmo-frontend
+# ionicProject
+None for now
