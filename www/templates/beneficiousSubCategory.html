@@ -1,10 +1,6 @@
 
-
-
-
-
-
-<ion-view view-title="Convenios SubCategory">
+<ion-view view-title="{{subCategories[0].category.category}}">
+  <!-- Convenios SubCategory -->
 
   <ion-nav-buttons side="left">
     <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
@@ -16,22 +12,22 @@
       <i class="icon ion-navicon-round"></i>
     </button>
   </ion-nav-buttons>
-  <ion-content>
+  <ion-content overflow-scroll="true">
 
-    <ion-list  ng-repeat="subCat in subCategories">
-      <div>
+    <ion-list ng-repeat="subCat in subCategories">
+      <div class="categoryPaddingStyle">
 
-          <div class="imageOverlay" ng-click="goBeneficiousCouponsPage(subCat._id)">
-            <img ng-src="http://banistmo-backend.herokuapp.com/{{subCat.image}}" class="firstImageStyle" style="height: 145px;" ng-show="!!subCat.image" onError="this.src='img/beneficos.jpg'">
-            <img src="img/beneficos.jpg" class="firstImageStyle" style="height: 111px;" ng-hide="!!subCat.image">
-            <div  style="position: absolute;bottom: 45%;left: 0;width: 100%;text-align: center;">
-              <span  style="color: white;font-size: 25px !important;letter-spacing: -1px;font-weight: bold;">
-                {{subCat.name}}
-              </span>
-            </div>
-          </div>
-    </div>
+              <div class="imageOverlay"  ng-click="goBeneficiousCouponsPage(subCat._id)">
+                <img ng-src="http://banistmo-backend.herokuapp.com/{{subCat.image}}" class="firstImageStyle" style="height: 145px;margin-top: -7px;" ng-show="!!subCat.image" onError="this.src='img/beneficos.jpg'">
+
+                <img src="img/beneficos.jpg" class="firstImageStyle" style="height: 145px;margin-top: -7px;" ng-hide="!!subCat.image">
+                <div  style="position: absolute;bottom: 3%;left: 0;width: 100%;text-align: center; background: rgba(0, 0, 0, 0.4) !important;margin-top: 55%;height: 103%;">
+                  <span style="color: white;font-size: 25px !important;letter-spacing: -1px;font-weight: bold;position: relative;top: 50%;">
+                    {{subCat.name}}
+                  </span>
+                </div>
+              </div>
+      </div>
     </ion-list>
-
   </ion-content>
 </ion-view>

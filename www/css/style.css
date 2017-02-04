@@ -84,7 +84,7 @@
 
     #homecontent {
         /*background-image: url(../img/home_1.png) !important;*/
-        background-image: url(../img/PORTDADA1.jpg) !important;
+        background-image: url(../img/PORTDADA1-comp.jpg) !important;
         -webkit-background-size: cover !important;
         -moz-background-size: cover !important;
         background-size: cover !important;
@@ -450,10 +450,17 @@
   color: #00428a !important;
 }
 /*<<<<<<< HEAD*/
-.tabs .tab-item .icon.vacantes {
+/*.tabs .tab-item .icon.vacantes {
   background-repeat: no-repeat;
   background-position: 50%;
   background-image: url(../img/briefcase.png);
+  background-size: contain;
+}*/
+
+.tabs .tab-item .icon.beneficios {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(../img/icono_beneficios.png);
   background-size: contain;
 }
 
@@ -466,10 +473,18 @@
   background-size: contain;
   width: 30px;
 }
-.tabs .tab-item .icon.calendario {
+/*.tabs .tab-item .icon.calendario {
   background-repeat: no-repeat;
   background-position: 50%;
   background-image: url(../img/calendar1-flat.png);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+}*/
+.tabs .tab-item .icon.ghContigo {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(../img/iconoghcontigo1.png);
   background-size: contain;
   width: 30px;
   height: 30px;
@@ -661,4 +676,7 @@
   color: white !important;
   height: 38px !important;
   padding-top: 8px !important;
+}
+.justify{
+  text-align: justify;
 }

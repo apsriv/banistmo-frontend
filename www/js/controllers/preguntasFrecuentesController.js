@@ -98,6 +98,147 @@ angular.module('starter').controller('preguntasFrecuentesController', function($
     $scope.show8 = $scope.show8 ? false : true;
   };
 
+  // for sub beneficious category
+    $scope.beneficious1 = false;
+    $scope.beneficious2 = false;
+    $scope.beneficious3 = false;
+    $scope.beneficious4 = false;
+    $scope.beneficious5 = false;
+
+    $scope.beneficiousShowOne = function () {
+      $scope.beneficious1 = $scope.beneficious1 ? false : true;
+      $scope.beneficious2 = false;
+      $scope.beneficious3 = false;
+      $scope.beneficious4 = false;
+      $scope.beneficious5 = false;
+    };
+    $scope.beneficiousShowTwo = function () {
+      $scope.beneficious1 = false;
+      $scope.beneficious2 = $scope.beneficious2 ? false : true;
+      $scope.beneficious3 = false;
+      $scope.beneficious4 = false;
+      $scope.beneficious5 = false;
+    };
+    $scope.beneficiousShowThree = function () {
+      $scope.beneficious1 = false;
+      $scope.beneficious2 = false;
+      $scope.beneficious3 = $scope.beneficious3 ? false : true;
+      $scope.beneficious4 = false;
+      $scope.beneficious5 = false;
+    };
+    $scope.beneficiousShowFour = function () {
+      $scope.beneficious1 = false;
+      $scope.beneficious2 = false;
+      $scope.beneficious3 = false;
+      $scope.beneficious4 = $scope.beneficious4 ? false : true;
+      $scope.beneficious5 = false;
+    };
+    $scope.beneficiousShowFive = function () {
+      $scope.beneficious1 = false;
+      $scope.beneficious2 = false;
+      $scope.beneficious3 = false;
+      $scope.beneficious4 = false;
+      $scope.beneficious5 = $scope.beneficious5 ? false : true;
+    };
+  //
+
+  // for sub Mi-pago category
+    $scope.mi1 = false;
+    $scope.mi2 = false;
+    $scope.mi3 = false;
+    $scope.mi4 = false;
+    $scope.mi5 = false;
+
+    $scope.miShowOne = function () {
+      $scope.mi1 = $scope.mi1 ? false : true;
+      $scope.mi2 = false;
+      $scope.mi3 = false;
+      $scope.mi4 = false;
+      $scope.mi5 = false;
+    };
+    $scope.miShowTwo = function () {
+      $scope.mi1 = false;
+      $scope.mi2 = $scope.mi2 ? false : true;
+      $scope.mi3 = false;
+      $scope.mi4 = false;
+      $scope.mi5 = false;
+    };
+    $scope.miShowThree = function () {
+      $scope.mi1 = false;
+      $scope.mi2 = false;
+      $scope.mi3 = $scope.mi3 ? false : true;
+      $scope.mi4 = false;
+      $scope.mi5 = false;
+    };
+    $scope.miShowFour = function () {
+      $scope.mi1 = false;
+      $scope.mi2 = false;
+      $scope.mi3 = false;
+      $scope.mi4 = $scope.mi4 ? false : true;
+      $scope.mi5 = false;
+    };
+    $scope.miShowFive = function () {
+      $scope.mi1 = false;
+      $scope.mi2 = false;
+      $scope.mi3 = false;
+      $scope.mi4 = false;
+      $scope.mi5 = $scope.mi5 ? false : true;
+    };
+  //
+
+  // for sub Mi-Equipo category
+    $scope.miEquipo1 = false;
+    $scope.miEquipo2 = false;
+    $scope.miEquipo3 = false;
+
+
+    $scope.miEquipoShowOne = function () {
+      $scope.miEquipo1 = $scope.miEquipo1 ? false : true;
+      $scope.miEquipo2 = false;
+      $scope.miEquipo3 = false;
+
+    };
+    $scope.miEquipoShowTwo = function () {
+      $scope.miEquipo1 = false;
+      $scope.miEquipo2 = $scope.miEquipo2 ? false : true;
+      $scope.miEquipo3 = false;
+
+    };
+    $scope.miEquipoShowThree = function () {
+      $scope.miEquipo1 = false;
+      $scope.miEquipo2 = false;
+      $scope.miEquipo3 = $scope.miEquipo3 ? false : true;
+
+    };
+
+  //
+
+  // for sub concurso category
+    $scope.concurso1 = false;
+    $scope.concurso2 = false;
+    $scope.concurso3 = false;
+
+
+    $scope.concursoShowOne = function () {
+      $scope.concurso1 = $scope.concurso1 ? false : true;
+      $scope.concurso2 = false;
+      $scope.concurso3 = false;
+
+    };
+    $scope.concursoShowTwo = function () {
+      $scope.concurso1 = false;
+      $scope.concurso2 = $scope.concurso2 ? false : true;
+      $scope.concurso3 = false;
+
+    };
+    $scope.concursoShowThree = function () {
+      $scope.concurso1 = false;
+      $scope.concurso2 = false;
+      $scope.concurso3 = $scope.concurso3 ? false : true;
+
+    };
+
+  //
 
 
   $scope.goBack = function() {

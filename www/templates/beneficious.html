@@ -60,15 +60,7 @@
     </button>
   </ion-nav-buttons>
 
-  <ion-content>
-
-    <!-- <div>
-        <img src="img/convenios-home-crop.jpg" class="coupenImgStyle bottomBorder imgHeight" style="margin-top: 0px;height: 192px;">
-        <div class="imageDivStyle spanTextStyle" style="top: -49px;height: 45px;padding: 13px;">
-          <span class="imageTextStyle" style="color: #00428a;font-weight: 600;">
-          Convenios</span>
-        </div>
-      </div> -->
+  <ion-content overflow-scroll="true">
 
       <div>
           <img src="img/convenios-home-crop.jpg" class="coupenImgStyle bottomBorder" style="height: 245px !important;">
@@ -76,50 +68,32 @@
             <span  style="color: #00428a;font-size: 15px;letter-spacing: -1px;font-size: 20px;font-weight: 600;">
             Convenios</span>
           </div>
-        </div>
-
-
-      <!-- convenios1 -->
-
-      <!-- <div>
-
-        <div class="imageOverlay">
-           <img src="img/beneficos.jpg" style="width: 100%;height: 160px;">
-           <div class="imgOverlayDiv">
-             <span class="imageDivStyle">
-               Convenios</span>
-           </div>
-         </div>
-
-        </div> -->
-
+      </div>
 
    <div class="formularioDivStyle bottomBorder divMargin" style="height: 22px;margin-top: -49px;"></div>
 
    <div>
-     <p  style="padding: 20px;font-weight: 500;">
+     <p  style="padding: 20px;font-weight: 500;text-align: justify;">
        La Calidad de Vida de nuestros colaboradores es primordial.<br/>
       Como parte del portafolio de beneficios en productos y servicios, que te permita tener una vida saludable, te invitamos a conocer y disfrutar de los convenios que tenemos para ti.<br/>
       Recuerda que para obtener todos los beneficios de los convenios debes presentar tu carnet de colaborador.
      </p>
    </div>
     <ion-list ng-repeat="cat in categories">
+      <div class="categoryPaddingStyle">
 
+              <div class="imageOverlay"  ng-click="goBeneficiousSubCategoryPage(cat._id)">
+                <!-- ng-click="goBeneficiousCouponsPage()" -->
+                <img ng-src="{{cat.image}}" class="firstImageStyle" style="height: 145px;margin-top: -7px;" ng-show="!!cat.image" onError="this.src='img/beneficos.jpg'">
 
-
-    <div class="categoryPaddingStyle">
-
-            <div class="imageOverlay" ng-click="goBeneficiousCouponsPage()" style="">
-              <img ng-src="{{cat.image}}" class="firstImageStyle" style="height: 145px;margin-top: -7px;" ng-show="!!cat.image" onError="this.src='img/beneficos.jpg'">
-
-              <img src="img/beneficos.jpg" class="firstImageStyle" style="height: 111px;margin-top: -7px;" ng-hide="!!cat.image">
-              <div  style="position: absolute;bottom: 3%;left: 0;width: 100%;text-align: center; background: rgba(0, 0, 0, 0.4) !important;margin-top: 55%;height: 103%;">
-                <span style="color: white;font-size: 25px !important;letter-spacing: -1px;font-weight: bold;position: relative;top: 60px;">
-                  {{cat.category}}
-                </span>
+                <img src="img/beneficos.jpg" class="firstImageStyle" style="height: 145px;margin-top: -7px;" ng-hide="!!cat.image">
+                <div  style="position: absolute;bottom: 3%;left: 0;width: 100%;text-align: center; background: rgba(0, 0, 0, 0.4) !important;margin-top: 55%;height: 103%;">
+                  <span style="color: white;font-size: 25px !important;letter-spacing: -1px;font-weight: bold;position: relative;top: 60px;">
+                    {{cat.category}}
+                  </span>
+                </div>
               </div>
-            </div>
-    </div>
+      </div>
     </ion-list>
   </ion-content>
 

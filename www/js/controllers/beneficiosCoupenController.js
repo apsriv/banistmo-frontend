@@ -1,12 +1,14 @@
 angular.module('starter').controller('beneficiosCoupenController', function($scope, $state, $window, CouponService, $stateParams, IonicPopupService) {
 
-  $scope.catId = $stateParams.catId;
-  console.log('$scope.catId.. : ' + $scope.catId);
+  $scope.subCatId = $stateParams.subCatId;
+  // console.log('$scope.subCatId.. : ' + $scope.subCatId);
   $scope.goBack = function() {
-    $state.go('tab.beneficious');
+    $state.go('tab.beneficiousSubCategory');
+    // $state.go('tab.beneficious');
+
     // $window.history.back();
   };
-  $scope.subCatId = '58747bd014c45700115912ab';
+  // $scope.subCatId = '58747bd014c45700115912ab';
 
   $scope.$on('$ionicView.enter', function(ev) {
     if (ev.targetScope !== $scope)

@@ -12,17 +12,15 @@
     </button>
   </ion-nav-buttons>
   <ion-content class="fontHeaderColor">
-    <!-- <div  ng-repeat="coupens in coupensList" ng-click="goDetailPage(coupens)"> -->
     <div ng-repeat="data in noticiasData">
-        <div class="row"  style="border-bottom: 1px solid #00428a;" ng-click="goDetail(data._id)">
+        <div class="row"  ng-click="goDetail(data._id)">
           <div class="col">
-            <img src="img/coupen_1.png" style="border: none !important;width: 100%;" ng-hide="!!data.image">
-            <img ng-src="{{data.image}}" class="coupenImgStyle"  style="border: none !important;margin-top: -2px;" onError="this.src='img/coupen_1.png'">
-            <div class="item-text-wrap" style="color:#00428a;" >
+            <img ng-src="{{data.image}}" class="coupenImgStyle"  style="border: none !important;margin-top: -2px;height: 100%;" onError="this.src='img/coupen_1.png'">
+            <div class="item-text-wrap" style="color:#00428a;border-bottom: 1px solid #00428a;">
           {{data.title}}
             </div>
         </div>
-      </div><div></div>
+      </div><br/><br/>
 
        <!-- <div class="row"  style="border-bottom: 1px solid #00428a;" ng-click="goDetail()">
          <div class="col">

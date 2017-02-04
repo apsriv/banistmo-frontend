@@ -25,38 +25,38 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       StatusBar.styleDefault();
     }
 
-    // FCMPlugin.getToken(
-    //     function(token){
-    //
-    //       console.log('token : ' + token);
-    //
-    //       AppSettings.deviceToken = token;
-    //     },
-    //     function(err){
-    //       console.log('error retrieving token: ' + err);
-    //     }
-    //   );
+    FCMPlugin.getToken(
+        function(token){
+
+          console.log('token : ' + token);
+
+          AppSettings.deviceToken = token;
+        },
+        function(err){
+          console.log('error retrieving token: ' + err);
+        }
+      );
   });
 
-  // FCMPlugin.onNotification(
-  //     function(data){
-  //       if(data.wasTapped){
-  //         //Notification was received on device tray and tapped by the user.
-  //         console.log('tappded Data : ' + JSON.stringify(data));
-  //         alert( JSON.stringify(data) );
-  //       }else{
-  //         //Notification was received in foreground. Maybe the user needs to be notified.
-  //         console.log('foreground data Data : ' + JSON.stringify(data));
-  //         alert( JSON.stringify(data) );
-  //       }
-  //     },
-  //     function(msg){
-  //       console.log('onNotification callback successfully registered: ' + msg);
-  //     },
-  //     function(err){
-  //       console.log('Error registering onNotification callback: ' + err);
-  //     }
-  //   );
+  FCMPlugin.onNotification(
+      function(data){
+        if(data.wasTapped){
+          //Notification was received on device tray and tapped by the user.
+          console.log('tappded Data : ' + JSON.stringify(data));
+          // alert( JSON.stringify(data) );
+        }else{
+          //Notification was received in foreground. Maybe the user needs to be notified.
+          console.log('foreground data Data : ' + JSON.stringify(data));
+          // alert( JSON.stringify(data) );
+        }
+      },
+      function(msg){
+        console.log('onNotification callback successfully registered: ' + msg);
+      },
+      function(err){
+        console.log('Error registering onNotification callback: ' + err);
+      }
+    );
 
   if (Session.isLoggedIn() === false) {
     $location.path('/tab/login');
@@ -137,7 +137,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   })
 
   .state('tab.beneficiousCoupons', {
-    url: '/beneficiousCoupons',
+    url: '/beneficiousCoupons:subCatId',
     views: {
       'tab-beneficious': {
         templateUrl: 'templates/beneficiousCoupons.html',
@@ -374,7 +374,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     .state('tab.calendario', {
       url: '/calendario',
       views: {
-        'tab-calendario': {
+        'tab-more': {
           templateUrl: 'templates/calendario.html',
           controller: 'calendarioController'
         }
@@ -384,7 +384,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     .state('tab.calendarioDetail', {
       url: '/calendarioDetail/:eventId',
       views: {
-        'tab-calendario': {
+        'tab-more': {
           templateUrl: 'templates/calendarioDetail.html',
           controller: 'calendarioDetailController'
         }
@@ -468,7 +468,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   .state('tab.ghContigo', {
     url: '/ghContigo',
     views: {
-      'tab-more': {
+      'tab-ghcontigo': {
         templateUrl: 'templates/ghContigo.html',
         controller: 'ghContigoController'
       }
@@ -488,7 +488,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
    .state('tab.vacantes', {
       url: '/vacantes',
       views: {
-        'tab-vacantes': {
+        'tab-more': {
           templateUrl: 'templates/vacantes.html',
           controller: 'vacantesController'
         }
@@ -498,7 +498,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     .state('tab.vacantesLineamientos', {
        url: '/vacantesLineamientos',
        views: {
-         'tab-vacantes': {
+         'tab-more': {
            templateUrl: 'templates/vacantesLineamientos.html',
            controller: 'vacantesController'
          }
@@ -507,7 +507,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
      .state('tab.vacantesReclutar', {
         url: '/vacantesReclutar',
         views: {
-          'tab-vacantes': {
+          'tab-more': {
             templateUrl: 'templates/vacantesReclutar.html',
             controller: 'vacantesController'
           }
@@ -517,7 +517,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       .state('tab.vacantesSubMenu', {
          url: '/vacantesSubMenu',
          views: {
-           'tab-vacantes': {
+           'tab-more': {
              templateUrl: 'templates/vacantesSubMenu.html',
              controller: 'vacantesSubMenuController'
            }
@@ -526,7 +526,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
        .state('tab.vacantesDetail', {
           url: '/vacantesDetail',
           views: {
-            'tab-vacantes': {
+            'tab-more': {
               templateUrl: 'templates/vacantesDetail.html',
               controller: 'vacantesDetailController'
             }
@@ -566,7 +566,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
            .state('tab.Beneficios', {
               url: '/Beneficios',
               views: {
-                'tab-more': {
+                'tab-beneficios': {
                   templateUrl: 'templates/beneficios.html',
                   controller: 'BeneficiosController'
                 }

@@ -1,6 +1,7 @@
 angular.module('starter').controller('beneficiousSubCategoryController', function($scope, $state, $window,$stateParams, CouponService, IonicPopupService) {
 
   $scope.catId = $stateParams.catId;
+  // console.log('$scope.catId : ' + $scope.catId);
   $scope.goBack = function() {
     $state.go('tab.beneficious');
     // $window.history.back();
@@ -14,7 +15,7 @@ angular.module('starter').controller('beneficiousSubCategoryController', functio
       $scope.subCategories = [];
       if (response.success = "true") {
           $scope.subCategories = response.data;
-          console.log('$scope.subCategories : ' +  angular.toJson(response.data, ' ') );
+          // console.log('$scope.subCategories : ' +  angular.toJson(response.data, ' ') );
       }
     }).catch(function(error) {
         var error = JSON.parse(error);

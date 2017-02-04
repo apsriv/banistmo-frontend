@@ -19,10 +19,13 @@ angular.module('starter').controller('loginController', function($scope, $state,
         UserService.login(loginObj).then(function(response) {
             if (response.success = "true") {
                 var respData = JSON.parse(response);
-                for (var i = 0; i < respData.data.topic.length; i++) {
-                  console.log('respData.data.topic[i] : ' + respData.data.topic[i]);
-                  FCMPlugin.subscribeToTopic(respData.data.topic[i]);
+                if (!!respData.data.topic) {
+                  for (var i = 0; i < respData.data.topic.length; i++) {
+                    console.log('respData.data.topic[i] : ' + respData.data.topic[i]);
+                    FCMPlugin.subscribeToTopic(respData.data.topic[i]);
+                  }
                 }
+
               Session.setUser(response);
               $scope.userData = Session.getUser();
               // console.log('$scope.userData..... : ' + $scope.userData);

@@ -47,8 +47,12 @@ $scope.goReconocimientoPage = function () {
   $state.go('tab.reconocimiento');
   $scope.modal.hide();
 };
-$scope.goGhContigoPage = function () {
-  $state.go('tab.ghContigo');
+// $scope.goGhContigoPage = function () {
+//   $state.go('tab.ghContigo');
+//   $scope.modal.hide();
+// };
+$scope.goCalendarioPage = function () {
+  $state.go('tab.calendario');
   $scope.modal.hide();
 };
 $scope.goDirectoryPage = function () {
@@ -71,8 +75,12 @@ $scope.goCalendariodePage = function () {
   $state.go('tab.Calendariode');
   $scope.modal.hide();
 };
-$scope.goBeneficiosPage = function () {
-  $state.go('tab.Beneficios');
+// $scope.goBeneficiosPage = function () {
+//   $state.go('tab.Beneficios');
+//   $scope.modal.hide();
+// };
+$scope.goVacantesPage = function () {
+  $state.go('tab.vacantes');
   $scope.modal.hide();
 };
 
